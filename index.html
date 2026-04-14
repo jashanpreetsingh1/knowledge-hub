@@ -1,0 +1,150 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Knowledge Hub - Durham College</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/foundation.css">
+	<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+	<div class="header_background">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="cell large-4 small-8">
+					<!-- <div class="header__logo click-home pointer">
+						<div class="header__logo-text">
+							Durham College
+							<strong>Knowledge Hub</strong>
+						</div>
+					</div> -->
+					<div class="header__logo click-home pointer">
+						<img src="assets/images/logo.svg" alt="Durham College Logo" class="header__logo-img">
+					</div>
+				</div>
+				<div class="cell large-2 show-for-large"></div>
+				<div class="cell large-6 small-12">
+					<div class="search-container">
+						<input type="text" id="search" placeholder="Search topics or keywords..." value="">
+						<ul class="search-results hideAll"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- FILTERS - auto-run on change, no button needed -->
+	<div class="filters_background">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+
+				<div class="cell large-3 medium-4 small-12">
+					<label class="filter-label">Course</label>
+					<select id="filter-course">
+						<option value="">All Courses</option>
+					</select>
+				</div>
+
+				<div class="cell large-2 medium-4 small-6">
+					<label class="filter-label">Week</label>
+					<select id="filter-week">
+						<option value="">All Weeks</option>
+						<option value="1">Week 1</option>
+						<option value="2">Week 2</option>
+						<option value="3">Week 3</option>
+						<option value="4">Week 4</option>
+						<option value="5">Week 5</option>
+						<option value="6">Week 6</option>
+						<option value="7">Week 7</option>
+						<option value="8">Week 8</option>
+						<option value="9">Week 9</option>
+						<option value="10">Week 10</option>
+						<option value="11">Week 11</option>
+						<option value="12">Week 12</option>
+						<option value="13">Week 13</option>
+						<option value="14">Week 14</option>
+					</select>
+				</div>
+
+				<div class="cell large-3 medium-4 small-6">
+					<label class="filter-label">Keyword</label>
+					<select id="filter-keyword">
+						<option value="">All Keywords</option>
+					</select>
+				</div>
+
+				<div class="cell large-2 medium-2 small-6">
+					<a class="filter-reset pointer" id="btn-reset-filter">Reset Filters</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<main class="main-content">
+		<div class="grid-container">
+			<div class="grid-x">
+
+				<article class="cell large-12 small-12 box2 topics-show hideAll">
+					<div class="grid-x grid-padding-x grid-margin-y">
+						<div class="cell large-12">
+							<div class="section-title">Browse Topics</div>
+							<div class="result-count"></div>
+						</div>
+						<div class="topics-container"></div>
+					</div>
+				</article>
+
+				<article class="cell large-12 small-12 box2 pdfs-show hideAll">
+					<div class="grid-x grid-padding-x grid-margin-y">
+						<div class="cell large-12">
+							<div class="back-btn back-to-topics pointer">&larr; Back to Topics</div>
+							<div class="section-title pdfs-topic-title"></div>
+						</div>
+						<div class="cell large-8 medium-10 small-12 pdfs-list-container"></div>
+					</div>
+				</article>
+
+				<article class="cell large-12 small-12 box2 viewer-show hideAll">
+					<div class="grid-x grid-padding-x grid-margin-y">
+						<div class="cell large-12">
+							<div class="back-btn back-to-pdfs pointer">&larr; Back to PDF List</div>
+							<div class="section-title viewer-pdf-title" style="margin-top:0.5rem;"></div>
+						</div>
+						<div class="cell large-12">
+							<div class="viewer-toolbar">
+								<a class="btn-download" href="#" target="_blank">&#11123; Download PDF</a>
+								<span style="font-size:0.8rem;color:#888;">Scroll to read all pages</span>
+							</div>
+							<iframe class="pdf-viewer-frame" src="" title="PDF Viewer"></iframe>
+						</div>
+					</div>
+				</article>
+
+			</div>
+		</div>
+	</main>
+
+	<div class="footer_background">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="cell large-12 small-12">
+					<p>&copy; Durham College &nbsp;&mdash;&nbsp; Knowledge Hub </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/vendor.js"></script>
+	<script src="assets/js/foundation.js"></script>
+	<script src="assets/js/sammy.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
