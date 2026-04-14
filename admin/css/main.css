@@ -1,0 +1,290 @@
+/* admin/css/main.css
+   Knowledge Hub Admin
+   Durham College colours: #0B8261 (dark green) #45A046 (bright green)
+ */
+
+html, body * { box-sizing: border-box; }
+html { font-size: 16px; }
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: #888888;
+}
+
+/* MAIN -  centered container */
+main {
+	width: 62rem;
+	margin: 0 auto;
+	background-color: #DDDDDD;
+	color: #333333;
+}
+
+/* HEADER */
+main > header {
+	padding: 1rem 1rem 0 1rem;
+	background-color: #0B8261;
+	border-bottom: 4px solid #45A046;
+}
+
+.header__title {
+	font-size: 1.8rem;
+	color: #FFFFFF;
+	font-weight: 700;
+}
+
+.header__name {
+	font-size: 1.0rem;
+	color: rgba(255,255,255,0.8);
+	margin-bottom: 0.5rem;
+}
+
+/* TAB NAV -  ul/li float pattern */
+header ul {
+	margin-top: 0.75rem;
+	overflow: auto;
+	background-color: #074f3b;
+	padding: 0;
+	list-style: none;
+}
+
+header li {
+	float: left;
+	text-align: center;
+}
+
+header li a {
+	display: block;
+	padding: 0.65rem 1.8rem;
+	color: rgba(255,255,255,0.75);
+	text-decoration: none;
+	font-size: 0.9rem;
+	font-weight: 600;
+	border-right: 1px solid rgba(255,255,255,0.1);
+	transition: background-color 0.15s, color 0.15s;
+}
+
+header li a:hover,
+header li a.tab-active {
+	color: #FFFFFF;
+	background-color: #45A046;
+}
+
+/* ARTICLE + SECTIONS -  structure */
+article { padding: 1rem; }
+
+section {
+	background-color: #FFFFFF;
+	padding: 1rem;
+	margin-bottom: 0.3rem;
+}
+
+section > h1 {
+	font-weight: 700;
+	margin-bottom: 0.75rem;
+	color: #0B8261;
+	font-size: 1.05rem;
+	border-bottom: 2px solid #45A046;
+	padding-bottom: 0.4rem;
+	margin-top: 0;
+}
+
+section > h1 > span {
+	font-weight: 400;
+	color: #999999;
+	font-size: 0.75rem;
+}
+
+section p {
+	margin-top: 0.75rem;
+	margin-bottom: 0.5rem;
+}
+
+section label {
+	display: block;
+	font-size: 0.82rem;
+	font-weight: 700;
+	color: #444444;
+	margin-bottom: 0.3rem;
+}
+
+/* FORM INPUTS -  pattern + glow on focus */
+section input[type="text"],
+section textarea,
+section select {
+	width: 100%;
+	padding: 0.4rem 0.6rem;
+	border: 1px solid #CCCCCC;
+	border-radius: 3px;
+	font-size: 0.9rem;
+	margin-bottom: 0.15rem;
+	outline: none;
+	font-family: Arial, sans-serif;
+	transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* : glow effect on focus - approved in class */
+section input[type="text"]:focus,
+section textarea:focus,
+section select:focus {
+	border-color: #45A046;
+	box-shadow: 0 0 7px rgba(69,160,70,0.5);
+}
+
+section textarea {
+	height: 5rem;
+	resize: vertical;
+}
+
+section input[type="file"] {
+	padding: 0.3rem 0;
+	font-size: 0.88rem;
+	width: 100%;
+}
+
+/* BUTTONS -  primaryButton / secondaryButton naming */
+.primaryButton {
+	background-color: #0B8261;
+	border: 1px solid #074f3b;
+	border-radius: 3px;
+	color: #FFFFFF;
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 5px 16px;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	transition: background-color 0.15s;
+}
+.primaryButton:hover { background-color: #074f3b; }
+
+.secondaryButton {
+	background-color: #FFFFFF;
+	border: 1px solid #AAAAAA;
+	border-radius: 3px;
+	color: #333333;
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 5px 14px;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	transition: background-color 0.15s;
+}
+.secondaryButton:hover { background-color: #F0F0F0; }
+
+ /* Spacing between dropdown and New Topic  */
+section p select {
+	margin-bottom: 0.8rem;
+}
+
+.dangerButton {
+	background-color: #E53935;
+	border: 1px solid #C62828;
+	border-radius: 3px;
+	color: #FFFFFF;
+	font-size: 0.85rem;
+	font-weight: 700;
+	padding: 5px 14px;
+	cursor: pointer;
+	font-family: Arial, sans-serif;
+	transition: background-color 0.15s;
+}
+.dangerButton:hover { background-color: #C62828; }
+
+/* ERROR + SUCCESS MESSAGES */
+.error-msg {
+	background-color: #FFEBEE;
+	border: 1px solid #E53935;
+	border-left: 4px solid #E53935;
+	border-radius: 3px;
+	color: #C62828;
+	padding: 0.6rem 0.85rem;
+	font-size: 0.88rem;
+	margin: 0.5rem 0;
+}
+
+.success-msg {
+	background-color: #E8F5E9;
+	border: 1px solid #45A046;
+	border-left: 4px solid #0B8261;
+	border-radius: 3px;
+	color: #1B5E20;
+	padding: 0.6rem 0.85rem;
+	font-size: 0.88rem;
+	margin: 0.5rem 0;
+}
+
+/* TABLE -  td pattern */
+table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.85rem;
+	margin-top: 0.5rem;
+}
+
+td, th {
+	padding: 0.45rem 0.65rem;
+	vertical-align: middle;
+	border-bottom: 1px solid #EEEEEE;
+	text-align: left;
+}
+
+th {
+	background-color: #0B8261;
+	color: #FFFFFF;
+	font-weight: 700;
+}
+
+tr:nth-child(even) td { background-color: #F8F8F8; }
+tr:hover td { background-color: #E8F5E9; }
+
+/* KEYWORD BUBBLES -  called them "jelly beans" */
+.keyword-list {
+	min-height: 2.5rem;
+	padding: 0.3rem 0;
+}
+
+.keyword-tag {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	background-color: #E8F5E9;
+	color: #0B8261;
+	font-size: 0.82rem;
+	font-weight: 600;
+	padding: 0.22rem 0.65rem;
+	border-radius: 12px;
+	margin: 0.15rem;
+	border: 1px solid #45A046;
+}
+
+.keyword-delete {
+	background: none;
+	border: none;
+	color: #E53935;
+	cursor: pointer;
+	font-size: 1rem;
+	font-weight: 700;
+	padding: 0;
+	line-height: 1;
+	font-family: Arial, sans-serif;
+}
+.keyword-delete:hover { color: #C62828; }
+
+/* REFERENCE / RESPONSE TEXT -  classes */
+.article__reference { color: #888888; font-size: 0.8rem; }
+.article__reference a { color: #0B8261; }
+.article__response  { color: #444444; font-size: 0.85rem; }
+
+/* CLEAR FLOATS -  class */
+.clear__float { float: none; clear: both; }
+
+/* FOOTER */
+main > footer {
+	padding: 1rem 2rem;
+	background-color: #0B8261;
+	color: rgba(255,255,255,0.75);
+	font-size: 0.82rem;
+}
+main > footer a { color: #FFFFFF; text-decoration: none; }
+main > footer a:hover { text-decoration: underline; color: #45A046; }
